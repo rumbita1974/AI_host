@@ -419,7 +419,7 @@ function parseAIResponse(response: string, fallbackOverview: string) {
   let keyPoints: string[] = [];
   
   // Extract SUMMARY
-  const summaryMatch = cleanResponse.match(/SUMMARY:\s*(.+?)(?=\s*(?:REVIEW:|KEY POINTS:|$))/is);
+  const summaryMatch = cleanResponse.match(/SUMMARY:\s*(.+?)(?=\s*(?:REVIEW:|KEY POINTS:|$))/i);
   if (summaryMatch && summaryMatch[1]) {
     summary = summaryMatch[1].trim();
   }
